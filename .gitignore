@@ -3,6 +3,4 @@ __pycache__/
 venv/
 
 /audio_dataset
-/wav2vec2_local
-/wav2vec2_checkpoints
-/wav2vec2_finetuned
+/model
