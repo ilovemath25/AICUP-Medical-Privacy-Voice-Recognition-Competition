@@ -2,5 +2,5 @@ __pycache__/
 .ipynb_checkpoints/
 venv/
 
-/audio_dataset
+/audio_folder
 /model
