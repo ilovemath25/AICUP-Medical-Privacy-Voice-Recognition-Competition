@@ -2,23 +2,15 @@ from Speech2Text import model
 def transcribe(audioFile):
     if not audioFile.endswith((".wav", ".mp3", ".flac")):
         return None
-    result = model.transcribe(audioFile)
-    result["text"] = result["text"][0].upper() + result["text"][1:]
-    return result["text"]
-
-def transcribe_with_timestamps(audioFile):
-    if not audioFile.endswith((".wav", ".mp3", ".flac")):
-        return None
     result = model.transcribe(audioFile, word_timestamps=True)
+    result["text"] = result["text"][0].upper() + result["text"][1:]
     segments = result.get("segments", [])
-    results = []
+    words = []
     for segment in segments:
-        tempSegment = []
-        for s in segment["words"]:
-            tempSegment.append({
-                "word": s["word"],
-                "start": s["start"],
-                "end": s["end"]
+        for word in segment["words"]:
+            words.append({
+                "word": word["word"],
+                "start": word["start"],
+                "end": word["end"]
             })
-        results.append(tempSegment)
-    return results
+    return {"text" : result["text"], "words" : words}
