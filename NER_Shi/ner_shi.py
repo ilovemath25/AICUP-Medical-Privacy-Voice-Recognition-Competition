@@ -1,7 +1,8 @@
 from NER_Shi import ner_pipeline
 
-def predict(text):
+def predictTag(text):
     if not text:
         return None
     predictions = ner_pipeline(text)
-    print(predictions)
+    # print(predictions)
+    return predictions

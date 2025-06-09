@@ -9,7 +9,7 @@ def transcribe(audioFile):
     for segment in segments:
         for word in segment["words"]:
             words.append({
-                "word": word["word"],
+                "word": word["word"].strip('.,!?" '),
                 "start": word["start"],
                 "end": word["end"]
             })
