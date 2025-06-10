@@ -35,13 +35,8 @@ def process_file(filename):
             "word": tag["word"]
         })
 
-max = 1
-count = 0
 for filename in os.listdir(audio_folder):
-    if (count >= max): 
-        break
     process_file(filename)
-    count += 1
 with open('output1.txt', 'w') as file:
     for result in results1:
         file.write(result["file"] + '\t' + result["transcription"] + '\n')

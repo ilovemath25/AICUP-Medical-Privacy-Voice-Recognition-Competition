@@ -37,13 +37,11 @@ for line in task2_data:
         "word": word
     })
 
-# Adjust the tag list to include both B- and I- tags
 adjusted_tag_list = ["O"]
 for tag in tag_list:
     adjusted_tag_list.append(f"B-{tag}")
     adjusted_tag_list.append(f"I-{tag}")
 
-# Process each file
 for filename, transcription in text_info.items():
     if filename not in tag_info:
         continue
@@ -58,7 +56,6 @@ for filename, transcription in text_info.items():
             if tag not in tag_list:
                 tag_idx += 1
                 continue
-            # Check if the token is the first token in the entity (B-) or subsequent token (I-)
             tag_num = adjusted_tag_list.index(f"B-{tag}") if tag_idx == 0 else adjusted_tag_list.index(f"I-{tag}")
             ner_tags.append(tag_num)
             tag_idx += 1
