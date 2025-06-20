@@ -1,4 +1,0 @@
-23.wav	DATE	9.7	10.2	tomorrow
-23.wav	DATE	11.64	12.12	today
-23.wav	DATE	15.82	16.26	today
-23.wav	DATE	17.32	17.9	tomorrow
