@@ -10,22 +10,33 @@ This project focuses on **automatic speech recognition (ASR)** and **sensitive h
 ## 📁 Project Structure
 
 ```
-├───audio_folder
-│   ├───AudioFromCompetition
-│   │   └─── *.wav
-│   └───MedicalSpeechIntent
-│       └─── *.wav
-├───model
-│   ├───ner_shi_model
-│   └───whisper
-├───NER_Shi
+├───audio_folder/
+│   ├───Training_Dataset_01/
+│   │   ├───audio/
+│   │   │   └───*.wav
+│   │   ├───task_answer1.txt
+│   │   └───task_answer2.txt
+│   ├───Training_Dataset_02/
+│   │   ├───audio/
+│   │   │   └───*.wav
+│   │   ├───task_answer1.txt
+│   │   └───task_answer2.txt
+│   └───Validation_Dataset/
+│       ├───audio/
+│       │   └───*.wav
+│       ├───task_answer1.txt
+│       └───task_answer2.txt
+├───model/
+│   ├───ner_shi_model/
+│   └───whisper/
+├───NER_Shi/
 │   │   combineData.py
 │   │   combined_data.json
 │   │   ner_shi.py
 │   │   tag.txt
 │   │   train.ipynb
 │   └───__init__.py
-├───Speech2Text
+├───Speech2Text/
 │   │   speech2text.py
 │   └───__init__.py
 ├── app.py
