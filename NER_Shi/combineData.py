@@ -4,8 +4,8 @@ result = []
 text_info = {}
 tag_info = {}
 
-task1_answer = "./audio_folder/task1_answer.txt"
-task2_answer = "./audio_folder/task2_answer.txt"
+task1_answer = "./audio_folder/Training_Dataset_01/task1_answer.txt"
+task2_answer = "./audio_folder/Training_Dataset_01/task2_answer.txt"
 
 # tag list
 with open("./NER_Shi/tag.txt", 'r', encoding='utf-8') as file:

@@ -2,9 +2,9 @@ from Speech2Text.speech2text import transcribe
 from NER_Shi.ner_shi import predictTag
 import os
 
-a = "audioFromCompetition"
-b = "medicalSpeechIntent"
-audio_folder = "./audio_folder/" + a
+a = "Training_Dataset_01"
+b = "Training_Dataset_02"
+audio_folder = "./audio_folder/" + a + "/audio"
 results1 = []
 results2 = []
 
